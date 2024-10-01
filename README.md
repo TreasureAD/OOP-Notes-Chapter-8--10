@@ -230,6 +230,55 @@
 - Ensures consistency across constructors.
 - Avoids the need to chain constructors or duplicate initialization logic.
 
+  # Chapter 9 Notes: Java Textbook
+
+## Constructors
+- **Definition**: Special methods that initialize a new object of a class.
+- **Characteristics**:
+  - Same name as the class.
+  - No return type (not even `void`).
+  - Automatically called when a new object is created using the `new` keyword.
+  
+### Purpose of Constructors
+- Initialize object fields to desired values.
+- Set up initial state of the object.
+
+### Types of Constructors
+1. **Default Constructor**:
+   - No parameters.
+   - Automatically created by the compiler if no constructors are explicitly defined.
+2. **Parameterized Constructor**:
+   - Accepts arguments to initialize fields with specific values.
+
+### Overloading Constructors
+- A class can have multiple constructors with different parameter lists (signatures).
+- Allows flexibility in how objects are created.
+
+### Constructor Chaining
+- Using `this()` within a constructor to call another constructor in the same class.
+- Helps avoid code duplication and centralizes initialization logic.
+
+## Initialization Blocks
+- **Definition**: A block of code that runs before the constructor, used to set up initial values.
+- Runs before the constructor code executes, regardless of which constructor is called.
+
+## `this` Keyword
+- Refers to the current object instance.
+- Used for:
+  - Differentiating between class fields and method parameters with the same name.
+  - Calling another constructor in the same class (`this(parameters)`).
+
+## Garbage Collection
+- **Purpose**: Automatically frees up memory by deleting unused objects.
+- **How it works**: If no references point to an object, it becomes eligible for garbage collection.
+- **Calling `System.gc()`**: Requests garbage collection, but it's not guaranteed to run immediately.
+
+### Finalizers
+- **Definition**: A special method (`finalize()`) that gets called when an object is about to be destroyed.
+- **Usage**: Rarely used; not recommended for resource management as it can delay cleanup.
+
+
+
 
 
 
